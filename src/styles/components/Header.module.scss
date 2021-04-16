@@ -1,5 +1,24 @@
+.overlay {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: hsla(0, 0%, 0%, 0.397);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.overlayActive {
+  visibility: visible;
+  opacity: 1;
+}
+
 .header {
   background: var(--color-white);
+  position: relative;
+  z-index: 100;
 }
 
 .content {
@@ -48,7 +67,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  width: 100%;
+  width: 101%;
   background: var(--color-dark-gray);
   left: 50%;
   transform: translateX(-50%);
