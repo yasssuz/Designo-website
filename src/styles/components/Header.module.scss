@@ -8,6 +8,7 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 99;
 }
 
 .overlayActive {
@@ -23,13 +24,14 @@
 
 .content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding-top: 3.4rem;
   padding-bottom: 3.4rem;
 
   @media screen and (max-width: 760px) {
     margin: 0 24px;
+    align-items: center;
   }
 
   @media screen and (min-width: 760px) {

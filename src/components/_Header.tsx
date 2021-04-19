@@ -37,7 +37,7 @@ export function Header() {
             <Link href="/contact">
               <a href="#" className={styles.navLink}>Contact</a>
             </Link>
-          </nav>
+          </nav> 
         </div>
       </header>
     </>
