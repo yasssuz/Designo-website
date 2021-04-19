@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from '../styles/components/Header.module.scss'
+import Link from 'next/link'
 
 export function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false)
@@ -12,8 +13,12 @@ export function Header() {
     <>
       <div className={`${isMenuActive && `${styles.overlayActive}`} ${styles.overlay}`} />
       <header className={styles.header}>
-        <div className={styles.content}>
-          <img src="/logo.svg" alt="designo logo"/>
+        <div className={`${styles.content} padding-container`}>
+          <Link href="/">
+            <a href="#">
+              <img src="/logo.svg" alt="designo logo"/>
+            </a>
+          </Link>
           <div 
             className={`${isMenuActive && `${styles.mobileTogglerActive}`} ${styles.mobileToggler}`} 
             onClick={showMenu}
@@ -23,9 +28,15 @@ export function Header() {
             <span className={styles.bar}></span>
           </div>
           <nav className={`${isMenuActive && `${styles.navigationActive}`} ${styles.navigation}`}>
-            <a href="#" className={styles.navLink}>Our Company</a>
-            <a href="#" className={styles.navLink}>Locations</a>
-            <a href="#" className={styles.navLink}>Contact</a>
+            <Link href="/about">
+              <a href="#" className={styles.navLink}>Our Company</a>
+            </Link>
+            <Link href="/locations">
+              <a href="#" className={styles.navLink}>Locations</a>
+            </Link>
+            <Link href="/contact">
+              <a href="#" className={styles.navLink}>Contact</a>
+            </Link>
           </nav>
         </div>
       </header>

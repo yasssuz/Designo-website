@@ -1,0 +1,6 @@
+.padding-container {
+  @media screen and (min-width: 760px) {
+    margin: 0 40px;
+    padding: 0 calc((100vw - 1200px) / 2);
+  }
+}

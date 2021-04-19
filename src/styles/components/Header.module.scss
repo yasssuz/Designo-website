@@ -25,13 +25,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3.5rem calc((100vw - 1200px) / 2);
-  margin: 0 24px;
+  padding-top: 3.4rem;
+  padding-bottom: 3.4rem;
+
+  @media screen and (max-width: 760px) {
+    margin: 0 24px;
+  }
+
+  @media screen and (min-width: 760px) {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
 }
 
 .mobileToggler {
   display: block;
   cursor: pointer;
+
+  @media screen and (min-width: 760px) {
+    display: none;
+  }
 }
 
 .mobileTogglerActive {
@@ -71,11 +84,25 @@
   background: var(--color-dark-gray);
   left: 50%;
   transform: translateX(-50%);
-  top: 9.7rem;
+  top: 9.4rem;
   padding: 0 2.4rem;
   transition: height 0.3s ease, padding 0.3s ease;
   height: 0;
   overflow: auto;
+
+  @media screen and (min-width: 760px) {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    left: unset;
+    width: unset;
+    transform: unset;
+    height: 100%;
+    overflow: unset;
+    background: transparent;
+    top: unset;
+    padding: 0;
+  }
 }
 
 .navigationActive {
@@ -95,6 +122,9 @@
 
   & + & {
     margin-top: 3.2rem;
+    @media screen and (min-width: 760px) {
+      margin: 0 0 0 4.2rem;
+    }
   }
 
   &::after {
@@ -112,5 +142,15 @@
 
   &:hover::after {
     transform: scale(1);
+  }
+
+  @media screen and (min-width: 760px) {
+    color: var(--color-dark-gray);
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    &::after {
+      background: var(--color-dark-gray);
+    }
   }
 }

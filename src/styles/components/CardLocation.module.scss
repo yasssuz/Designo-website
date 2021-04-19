@@ -1,0 +1,82 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.card + .card {
+  margin-top: 4.1rem;
+}
+
+.image {
+  position: relative;
+  height: auto;
+}
+
+// .actualImage {
+//   object-fit: cover;
+// }
+
+.info {
+  all: unset;
+  text-align: center;
+  padding: 8rem 0;
+  background: #fdf3f0;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    height: 292px;
+    width: 292px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+    opacity: 0.06;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  &::after {
+    content: '';
+    height: 292px;
+    width: 292px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -170px;
+    right: -170px;
+    z-index: -1;
+    background: conic-gradient(from 90deg at 50% 50%, rgba(93, 2, 2, 0.0001) 0deg, rgba(93, 2, 2, 0.497569) 360deg);
+    opacity: 0.06;
+    transform: matrix(0, 1, 1, 0, 0, 0);
+  }
+}
+
+.country {
+  margin-bottom: 2.4rem;
+}
+
+.sectionDivider {
+  color: var(--color-dark-gray);
+  font-size: 1.5rem;
+  line-height: 1.67;
+  font-weight: 700;
+}
+
+.contactInfo {
+  margin-top: 2.4rem;
+}
+
+.street,
+.state,
+.number,
+.email {
+  font-size: 1.5rem;
+  line-height: 1.67;
+  color: var(--color-dark-gray);
+  font-weight: 400;
+  display: block;
+}
