@@ -6,11 +6,37 @@
 
 .card + .card {
   margin-top: 4.1rem;
+
+  @media screen and (min-width: 700px) {
+    margin-top: 12rem;
+  }
 }
 
 .image {
   position: relative;
   height: auto;
+
+  .tablet {
+    display: none;
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 100%;
+    height: 326px;
+    margin-bottom: 3.1rem;
+
+    .mobile {
+      display: none;
+    }
+
+    .tablet {
+      display: unset;
+
+      img {
+        border-radius: 1.5em;
+      }
+    }
+  }
 }
 
 .info {
@@ -48,6 +74,42 @@
     background: conic-gradient(from 90deg at 50% 50%, rgba(93, 2, 2, 0.0001) 0deg, rgba(93, 2, 2, 0.497569) 360deg);
     opacity: 0.06;
     transform: matrix(0, 1, 1, 0, 0, 0);
+  }
+
+  @media screen and (min-width: 700px) {
+    border-radius: 1.5em;
+    text-align: left;
+    padding: 8.8rem 7.4rem;
+
+    &::before {
+      top: unset;
+      bottom: 0;
+      transform: rotate(40deg);
+    }
+
+    &::after {
+      bottom: 0;
+      right: unset;
+      left: 292px;
+      background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+    }
+
+    .specifics {
+      display: flex;
+      align-items: center;
+
+      div {
+        width: 25.5rem;
+      }
+
+      & > div {
+        margin-right: 3rem;
+      }
+
+      h3 {
+        margin: 0;
+      }
+    }
   }
 }
 

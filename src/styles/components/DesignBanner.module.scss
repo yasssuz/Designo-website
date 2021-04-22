@@ -1,0 +1,50 @@
+.bannerContainer {
+  width: 100%;
+  min-height: 32rem;
+  background: var(--color-peach);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 9.6rem;
+
+  &::before {
+    content: '';
+    width: 29.2rem;
+    height: 29.2rem;
+    position: absolute;
+    top: 0;
+    right: 29.3rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+    mix-blend-mode: normal;
+    opacity: 0.31;
+    transform: rotate(-180deg);
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    width: 29.2rem;
+    height: 29.2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+    mix-blend-mode: normal;
+    opacity: 0.31;
+    transform: rotate(90deg);
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  p {
+    max-width: 45rem;
+    margin: 0 auto;
+  }
+}

@@ -15,7 +15,7 @@ export function Header() {
       <header className={styles.header}>
         <div className={`${styles.content} padding-container`}>
           <Link href="/">
-            <a href="#">
+            <a href="#" className={styles.aAroundLogo}>
               <img src="/logo.svg" alt="designo logo"/>
             </a>
           </Link>
