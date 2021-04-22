@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import { DesignBanner } from '../components/_DesignBanner'
-import { DesignCard } from '../components/_DesignCard'
-import { DesingLink } from '../components/_DesignLink'
-import styles from '../styles/views/web-design.module.scss'
+import { DesignBanner } from '../../components/_DesignBanner'
+import { DesignCard } from '../../components/_DesignCard'
+import { DesingLink } from '../../components/_DesignLink'
+import styles from '../../styles/views/web-design.module.scss'
 
 export default function webDesign() {
   const designCards = [
@@ -39,7 +39,7 @@ export default function webDesign() {
   ]
 
   return (
-    <div className={`${styles.webDesignContainer}`}>
+    <div>
       <Head>
         <title>Designo | Web Design</title>
         <meta name="description" content="We build websites that serve as powerful marketing tools and bring memorable brand experiences."/>
@@ -50,23 +50,29 @@ export default function webDesign() {
         description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
       />
 
-      <ul className={styles.cardsList}>
-        {designCards.map(card => <DesignCard 
-          imgURL={card.imgURL}
-          title={card.title} 
-          description={card.description}
-          key={card.title}
-        />)}
-      </ul>
+      <div className={`${styles.cardsArea}`}>
+        <ul className={styles.designsList}>
+          {designCards.map(card => <DesignCard 
+            imgURL={card.imgURL}
+            title={card.title} 
+            description={card.description}
+            key={card.title}
+          />)}
+        </ul>
 
-      <DesingLink 
-        title="app design" 
-        imgURL="/assets/home/mobile/image-app-design.jpg" 
-      />
-      <DesingLink 
-        title="graphic design" 
-        imgURL="/assets/home/mobile/image-graphic-design.jpg" 
-      />
+        <ul className={styles.linksList}>
+          <DesingLink 
+            title="app design" 
+            imgURL="/assets/home/mobile/image-app-design.jpg" 
+            pageURL="/design/app-design"
+          />
+          <DesingLink 
+            title="graphic design"
+            imgURL="/assets/home/mobile/image-graphic-design.jpg" 
+            pageURL="/design/graphic-design"
+          />
+        </ul>
+      </div>
     </div>
   )
 }
