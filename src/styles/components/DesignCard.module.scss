@@ -2,8 +2,8 @@
   display: grid;
   grid-template-rows: 320px 1fr;
   grid-template-columns: 1fr;
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  position: relative;
 
   & + & {
     margin-top: 4rem;

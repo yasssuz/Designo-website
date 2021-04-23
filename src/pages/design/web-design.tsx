@@ -1,10 +1,12 @@
 import Head from 'next/head'
+import { ContactCard } from '../../components/_ContactCard'
 import { DesignBanner } from '../../components/_DesignBanner'
 import { DesignCard } from '../../components/_DesignCard'
 import { DesingLink } from '../../components/_DesignLink'
+import { Footer } from '../../components/_Footer'
 import styles from '../../styles/views/web-design.module.scss'
 
-export default function webDesign() {
+export default function WebDesign() {
   const designCards = [
     {
       imgURL: '/assets/web-design/desktop/image-express.jpg',
@@ -50,7 +52,7 @@ export default function webDesign() {
         description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
       />
 
-      <div className={`${styles.cardsArea}`}>
+      <main className={`${styles.main}`}>
         <ul className={styles.designsList}>
           {designCards.map(card => <DesignCard 
             imgURL={card.imgURL}
@@ -63,15 +65,19 @@ export default function webDesign() {
         <ul className={styles.linksList}>
           <DesingLink 
             title="app design" 
-            imgURL="/assets/home/mobile/image-app-design.jpg" 
+            imgURL="/assets/home/desktop/image-app-design.jpg" 
             pageURL="/design/app-design"
           />
           <DesingLink 
             title="graphic design"
-            imgURL="/assets/home/mobile/image-graphic-design.jpg" 
+            imgURL="/assets/home/desktop/image-graphic-design.jpg" 
             pageURL="/design/graphic-design"
           />
         </ul>
+      </main>
+
+      <div className={styles.footerArea}>
+        <ContactCard />
       </div>
     </div>
   )
