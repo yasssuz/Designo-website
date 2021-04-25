@@ -14,10 +14,11 @@ export const DesignCard: React.FC<DesignCardProps> = ({title, description, imgUR
         <Image 
           src={imgURL}
           layout='fill'
+          objectFit='cover'
         />
       </div>
       <div className={styles.content}>
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <p className="paragraph-secondary">{description}</p>
       </div>
     </li>

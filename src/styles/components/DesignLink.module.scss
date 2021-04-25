@@ -14,6 +14,19 @@
     background: var(--color-peach);
   }
 
+  @media screen and (min-width: 600px) {
+    height: 200px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    height: 308px;
+    width: 541px;
+
+    & + & {
+      margin-top: 0;
+    }
+  }
+
   a {
     text-decoration: none;
     text-align: center;
@@ -32,9 +45,9 @@
 
     h1 {
       text-transform: uppercase;
-      font-size: 2.8rem;
+      font-size: clamp(2.8rem, 5vw, 4rem);
       letter-spacing: 1.5px;
-      margin-bottom: 1.2rem;
+      margin-bottom: clamp(1.2rem, 3vw, 2.2rem);
       z-index: 1;
     }
 

@@ -22,7 +22,7 @@ export const DesingLink: React.FC<DesignLinkProps> = (props) => {
           <h1 className="title-primary-white">{props.title}</h1>
           <span>
             View projects
-            <img src="/assets/shared/desktop/icon-right-arrow.svg"/>
+            <img src="/assets/shared/desktop/icon-right-arrow.svg" />
           </span>
         </a>
       </Link>
