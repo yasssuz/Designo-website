@@ -3,6 +3,10 @@
   z-index: 10;
   padding: 0 24px;
 
+  @media screen and (min-width: 600px) {
+    padding: 0 calc((100vw - 1250px) / 2);
+  }
+
   &::after {
     content: '';
     height: 50%;
@@ -27,34 +31,13 @@
     padding: 0 24px;
     overflow: hidden;
     position: relative;
-    background: url('/assets/shared/desktop/bg-pattern-small-circle.svg') no-repeat -130px 300px, var(--color-peach);
+    background: url('/Group31.svg') no-repeat center right, var(--color-peach);
+    background-size: cover;
 
-    &::before {
-      content: '';
-      position: absolute;
-      background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
-      height: 292px;
-      width: 292px;
-      border-radius: 50%;
-      mix-blend-mode: normal;
-      opacity: 0.31;
-      right: -30px;
-      bottom: 50%;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
-      mix-blend-mode: normal;
-      opacity: 0.31;
-      height: 292px;
-      width: 292px;
-      border-radius: 50%;
-      mix-blend-mode: normal;
-      opacity: 0.31;
-      right: -30px;
-      top: 50%;
+    @media screen and (min-width: 600px) {
+      width: calc(100% - 80px);
+      margin: auto;
+      height: 35rem;
     }
 
     p {
