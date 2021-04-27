@@ -1,0 +1,38 @@
+.main {
+  padding: 0 calc((100vw - 1250px) / 2);
+
+  @media screen and (min-width: 600px) {
+    margin: 0 40px 4rem;
+  }
+
+  .designsList {
+    margin: 9.6rem 24px;
+
+    @media screen and (min-width: 600px) {
+      margin: 12rem 0;
+    }
+
+    @media screen and (min-width: 1000px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3.2rem 30px;
+      margin: 16rem 0;
+    }
+  }
+
+  .linksList {
+    margin: 0 24px 9.6rem;
+
+    @media screen and (min-width: 600px) {
+      margin: 0 0 12rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 16rem;
+    }
+  }
+}
