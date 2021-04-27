@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../../styles/views/AppDesign.module.scss";
+import styles from "../../styles/views/DesignPages.module.scss";
 import { ContactCard } from "../../components/_ContactCard";
 import { DesignBanner } from "../../components/_DesignBanner";
 import { DesignCard } from "../../components/_DesignCard";
@@ -41,12 +41,12 @@ export default function AppDesign() {
         <meta name="description" content="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."/>
       </Head>
 
-      <DesignBanner
-        title="App Design"
-        description="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
-      />
-
       <main className={`${styles.main}`}>
+        <DesignBanner
+          title="App Design"
+          description="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
+        />
+
         <ul className={styles.designsList}>
           {designCards.map(card => <DesignCard
             imgURL={card.imgURL}

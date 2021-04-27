@@ -3,8 +3,7 @@ import { ContactCard } from '../../components/_ContactCard'
 import { DesignBanner } from '../../components/_DesignBanner'
 import { DesignCard } from '../../components/_DesignCard'
 import { DesingLink } from '../../components/_DesignLink'
-import { Footer } from '../../components/_Footer'
-import styles from '../../styles/views/web-design.module.scss'
+import styles from '../../styles/views/DesignPages.module.scss'
 
 export default function WebDesign() {
   const designCards = [
@@ -47,12 +46,12 @@ export default function WebDesign() {
         <meta name="description" content="We build websites that serve as powerful marketing tools and bring memorable brand experiences."/>
       </Head>
 
-      <DesignBanner 
-        title="Web Design"
-        description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-      />
-
       <main className={`${styles.main}`}>
+        <DesignBanner 
+          title="Web Design"
+          description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
+        />
+
         <ul className={styles.designsList}>
           {designCards.map(card => <DesignCard 
             imgURL={card.imgURL}

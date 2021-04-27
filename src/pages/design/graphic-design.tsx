@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../../styles/views/GraphicDesign.module.scss"
+import styles from "../../styles/views/DesignPages.module.scss"
 import { ContactCard } from "../../components/_ContactCard";
 import { DesignBanner } from "../../components/_DesignBanner";
 import { DesignCard } from "../../components/_DesignCard";
@@ -31,12 +31,12 @@ export default function GraphicDesign() {
         <meta name="description" content="We deliver eye-catching branding materials that are tailored to meet your business objectives"/>
       </Head>
 
-      <DesignBanner 
-        title="Graphic Design"
-        description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-      />
-
       <main className={`${styles.main}`}>
+        <DesignBanner 
+          title="Graphic Design"
+          description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
+        />
+
         <ul className={styles.designsList}>
           {designCards.map(card => <DesignCard 
             imgURL={card.imgURL}
