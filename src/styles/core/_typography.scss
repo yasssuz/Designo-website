@@ -1,8 +1,12 @@
 .title-primary {
   min-height: 0vw;
   font-weight: 500;
-  font-size: clamp(3.3rem, 10vw, 4.8rem);
+  font-size: 3.3rem;
   line-height: 1.15;
+
+  @media screen and (min-width: 650px) {
+    font-size: 4.8rem;
+  }
 
   &-white {
     color: var(--color-white);
@@ -14,10 +18,14 @@
 }
 
 .paragraph-primary {
-  font-size: clamp(1.5rem, 3vw, 1.6rem);
+  font-size: 1.5rem;
   line-height: 1.67;
   color: var(--color-white);
   font-weight: 400;
+
+  @media screen and (min-width: 330px) {
+    font-size: 1.6rem;
+  }
 }
 
 .paragraph-secondary {
