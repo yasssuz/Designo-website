@@ -45,10 +45,16 @@
 
     h1 {
       text-transform: uppercase;
-      font-size: clamp(2.8rem, 5vw, 4rem);
+      font-size: 2.8rem;
       letter-spacing: 1.5px;
-      margin-bottom: clamp(1.2rem, 3vw, 2.2rem);
+      margin-bottom: 1.2rem;
       z-index: 1;
+      transition: font-size 0.15s ease, margin-bottom 0.15s ease;
+
+      @media screen and (min-width: 600px) {
+        font-size: 4rem;
+        margin-bottom: 2.2rem;
+      }
     }
 
     span {
