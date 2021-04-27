@@ -5,10 +5,10 @@ interface DesignBannerProps {
   description: string
 }
 
-export const DesignBanner: React.FC<DesignBannerProps> = ({title, description}) => {
+export const DesignBanner: React.FC<DesignBannerProps> = ({ title, description }) => {
   return (
-    <div className={`padding-container ${styles.bannerContainer}`}>
-      <h1 className="title-primary-white">{title}</h1>
+    <div className={`${styles.bannerContainer}`}>
+      <h1 className="title-primary title-primary-white">{title}</h1>
       <p className="paragraph-primary">{description}</p>
     </div>
   )
