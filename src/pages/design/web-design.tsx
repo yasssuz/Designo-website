@@ -43,33 +43,33 @@ export default function WebDesign() {
     <div>
       <Head>
         <title>Designo | Web Design</title>
-        <meta name="description" content="We build websites that serve as powerful marketing tools and bring memorable brand experiences."/>
+        <meta name="description" content="We build websites that serve as powerful marketing tools and bring memorable brand experiences." />
       </Head>
 
       <main className={`${styles.main}`}>
-        <DesignBanner 
+        <DesignBanner
           title="Web Design"
           description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
         />
 
         <ul className={styles.designsList}>
-          {designCards.map(card => <DesignCard 
+          {designCards.map(card => <DesignCard
             imgURL={card.imgURL}
-            title={card.title} 
+            title={card.title}
             description={card.description}
             key={card.title}
           />)}
         </ul>
 
         <ul className={styles.linksList}>
-          <DesingLink 
-            title="app design" 
-            imgURL="/assets/home/desktop/image-app-design.jpg" 
+          <DesingLink
+            title="app design"
+            imgURL="/assets/home/desktop/image-app-design.jpg"
             pageURL="/design/app-design"
           />
-          <DesingLink 
+          <DesingLink
             title="graphic design"
-            imgURL="/assets/home/desktop/image-graphic-design.jpg" 
+            imgURL="/assets/home/desktop/image-graphic-design.jpg"
             pageURL="/design/graphic-design"
           />
         </ul>
