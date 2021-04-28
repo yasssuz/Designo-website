@@ -16,11 +16,11 @@ export function Header() {
         <div className={`${styles.content} padding-container`}>
           <Link href="/">
             <a href="#" className={styles.aAroundLogo}>
-              <img src="/logo.svg" alt="designo logo"/>
+              <img src="/logo.svg" alt="designo logo" />
             </a>
           </Link>
-          <div 
-            className={`${isMenuActive && `${styles.mobileTogglerActive}`} ${styles.mobileToggler}`} 
+          <div
+            className={`${isMenuActive && `${styles.mobileTogglerActive}`} ${styles.mobileToggler}`}
             onClick={showMenu}
           >
             <span className={styles.bar}></span>
@@ -37,7 +37,7 @@ export function Header() {
             <Link href="/contact">
               <a href="#" className={styles.navLink}>Contact</a>
             </Link>
-          </nav> 
+          </nav>
         </div>
       </header>
     </>
