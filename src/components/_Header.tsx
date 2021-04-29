@@ -5,7 +5,7 @@ import Link from 'next/link'
 export function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false)
 
-  function showMenu() {
+  function handleMenu() {
     setIsMenuActive((prevstate) => !prevstate)
   }
 
@@ -21,7 +21,7 @@ export function Header() {
           </Link>
           <div
             className={`${isMenuActive && `${styles.mobileTogglerActive}`} ${styles.mobileToggler}`}
-            onClick={showMenu}
+            onClick={handleMenu}
           >
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
@@ -29,13 +29,31 @@ export function Header() {
           </div>
           <nav className={`${isMenuActive && `${styles.navigationActive}`} ${styles.navigation}`}>
             <Link href="/about">
-              <a href="#" className={styles.navLink}>Our Company</a>
+              <a
+                href="#"
+                className={styles.navLink}
+                onClick={handleMenu}
+              >
+                Our Company
+              </a>
             </Link>
             <Link href="/locations">
-              <a href="#" className={styles.navLink}>Locations</a>
+              <a
+                href="#"
+                className={styles.navLink}
+                onClick={handleMenu}
+              >
+                Locations
+              </a>
             </Link>
             <Link href="/contact">
-              <a href="#" className={styles.navLink}>Contact</a>
+              <a
+                href="#"
+                className={styles.navLink}
+                onClick={handleMenu}
+              >
+                Contact
+              </a>
             </Link>
           </nav>
         </div>
