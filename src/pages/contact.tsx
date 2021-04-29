@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useForm } from "react-hook-form"
 import { ButtonPrimary } from "../components/_Buttons";
+import { LocationsRow } from "../components/_LocationsRow";
 import styles from "../styles/views/Contact.module.scss"
 
 type FormData = {
@@ -23,15 +24,15 @@ export default function Contact() {
       </Head>
 
       <main>
-        <section className={styles.form}>
-          <div className={styles.form__content}>
-            <div className={styles.form__textArea}>
+        <section className={styles.bannerArea}>
+          <div className={styles.bannerArea__content}>
+            <div className={styles.bannerArea__textArea}>
               <h1 className="title-primary title-primary-white">Contact Us</h1>
               <p className="paragraph-primary">Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>
             </div>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className={styles.form__formArea}
+              className={styles.bannerArea__formArea}
               autoComplete="off"
             >
               <div className={styles.inputBlock}>
@@ -41,7 +42,11 @@ export default function Contact() {
                   className={`${errors.name ? "invalid" : ""}`}
                   placeholder="name"
                 />
-                {errors.name && <small>this field cannot be empty</small>}
+                {errors.name && <span>
+                  Can't be empty
+                  <img src="/assets/contact/desktop/icon-error.svg" />
+                </span>
+                }
               </div>
 
               <div className={styles.inputBlock}>
@@ -50,7 +55,11 @@ export default function Contact() {
                   {...register("emailAddress", { pattern: emailPattern, required: true })}
                   placeholder="email address"
                 />
-                {errors.emailAddress && <small>use a valid email address</small>}
+                {errors.emailAddress && <span>
+                  Email not valid
+                  <img src="/assets/contact/desktop/icon-error.svg" />
+                </span>
+                }
               </div>
 
               <div className={styles.inputBlock}>
@@ -59,7 +68,10 @@ export default function Contact() {
                   {...register("phoneNumber", { required: true })}
                   placeholder="phone"
                 />
-                {errors.phoneNumber && <small>use a valid number</small>}
+                {errors.phoneNumber && <span>
+                  Can't be empty
+                  <img src="/assets/contact/desktop/icon-error.svg" />
+                </span>}
               </div>
 
               <div className={styles.inputBlock}>
@@ -67,13 +79,21 @@ export default function Contact() {
                   placeholder="your message"
                   {...register("message", { required: true })}
                 />
-                {errors.message && <small>this field cannot be empty</small>}
+                {errors.message && <span
+                  className={styles.messageError}
+                >
+                  Can't be empty
+                  <img src="/assets/contact/desktop/icon-error.svg" />
+                </span>
+                }
               </div>
-
 
               <ButtonPrimary>submit</ButtonPrimary>
             </form>
           </div>
+        </section>
+        <section className={styles.locationsArea}>
+          <LocationsRow />
         </section>
       </main>
     </>

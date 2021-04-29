@@ -3,6 +3,7 @@ import styles from "../styles/components/Buttons.module.scss"
 
 interface ButtonProps {
   children: ReactNode
+  link?: string
 }
 
 export function ButtonPrimary({ children }: ButtonProps) {
@@ -12,4 +13,13 @@ export function ButtonPrimary({ children }: ButtonProps) {
   >
     {children}
   </button>
+}
+
+export function ButtonSecondary({ children, link }: ButtonProps) {
+  return <a
+    href={link}
+    className={styles.buttonSecondary}
+  >
+    {children}
+  </a>
 }

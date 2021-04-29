@@ -1,9 +1,11 @@
-.form {
+.bannerArea {
   padding: 0 calc((100vw - 1250px) / 2);
 
   &__content {
     padding: 7.4rem 24px;
-    background: var(--color-peach);
+    background: url('/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg') no-repeat, var(--color-peach);
+    background-position: 23% top;
+    background-size: 250%;
   }
 
   &__textArea {
@@ -20,6 +22,8 @@
     gap: 2.1rem;
 
     .inputBlock {
+      position: relative;
+
       input {
         min-height: 5rem;
         background: transparent;
@@ -32,7 +36,6 @@
         width: 100%;
         border-bottom: 1px solid var(--color-white);
         padding: 0 1.7rem;
-        margin-bottom: 0.5rem;
   
         &::-webkit-input-placeholder {
           font-weight: 500;
@@ -47,10 +50,26 @@
         }
       }
 
-      small {
-        font-size: 1.5rem;
-        font-weight: 500;
-        color: white;
+      span {
+        font-size: 1.3rem;
+        color: var(--color-white);
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        font-style: italic;
+        line-height: 2.6rem;
+
+        &.messageError {
+          bottom: 0;
+          top: unset;
+        }
+
+        img {
+          margin-left: 0.8rem;
+        }
       }
     }
 
@@ -84,4 +103,8 @@
       margin: 1.9rem auto 0;
     }
   }
+}
+
+.locationsArea {
+  margin: 12rem 0; 
 }

@@ -1,0 +1,52 @@
+.locationsRow {
+  list-style: none;
+
+  .location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      width: 202px;
+      height: 202px;
+      content: '';
+      border-radius: 50%;
+      opacity: 0.2;
+      background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+    }
+
+    &:nth-child(1)::before {
+      transform: matrix(0, -1, -1, 0, 0, 0);
+    }
+
+    &:nth-child(2)::before {
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    &:nth-child(3)::before {
+      transform: matrix(0, 1, 1, 0, 0, 0);
+    }
+
+    h2 {
+      letter-spacing: 5px;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 2.6rem;
+      text-transform: uppercase;
+      margin: 4.8rem 0 3.2rem;
+    }
+
+    a {
+      width: 15.5rem;
+      height: 5.6rem;
+    }
+  }
+
+  .location + .location {
+    margin-top: 4.8rem;
+  }
+}
