@@ -1,0 +1,54 @@
+.form {
+  padding: 0 calc((100vw - 1250px) / 2);
+
+  &__content {
+    padding: 7.4rem 24px;
+    background: var(--color-peach);
+  }
+
+  &__textArea {
+    text-align: center;
+    margin-bottom: 4.8rem;
+
+    h1 {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__formArea {
+    display: flex;
+    flex-direction: column;
+    gap: 2.1rem;
+
+    .inputBlock {
+      input {
+        min-height: 5rem;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: var(--color-white);
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid var(--color-white);
+        padding: 0 1.7rem;
+        margin-bottom: 0.5rem;
+  
+        &::-webkit-input-placeholder {
+          font-weight: 500;
+          font-size: 1.5rem;
+          color: var(--color-white);
+          text-transform: capitalize;
+          opacity: 0.6;
+        }
+      }
+
+      small {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: white;
+      }
+    }
+  }
+}
