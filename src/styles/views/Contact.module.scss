@@ -16,8 +16,7 @@
   }
 
   &__formArea {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 2.1rem;
 
     .inputBlock {
