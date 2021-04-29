@@ -6,14 +6,42 @@
     background: url('/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg') no-repeat, var(--color-peach);
     background-position: 23% top;
     background-size: 250%;
+
+    @media screen and (min-width: 650px) {
+      margin: 0 24px;
+      padding: 7.1rem 58px;
+      border-radius: 1.5rem;
+    }
+
+    @media screen and (min-width: 760px) {
+      margin: 0 40px;
+    }
   }
 
   &__textArea {
     text-align: center;
     margin-bottom: 4.8rem;
 
+    @media screen and (min-width: 650px) {
+      text-align: left;
+    }
+
     h1 {
       margin-bottom: 2.4rem;
+
+      @media screen and (min-width: 650px) {
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    p {
+      max-width: 50ch;
+      margin: auto;
+
+      @media screen and (min-width: 650px) {
+        margin: 0;
+        max-width: 57ch;
+      }
     }
   }
 
@@ -101,6 +129,10 @@
       height: 5.6rem;
       width: 15.2rem;
       margin: 1.9rem auto 0;
+
+      @media screen and (min-width: 650px) {
+        margin: 0.3rem 0 0 auto;
+      }
     }
   }
 }
