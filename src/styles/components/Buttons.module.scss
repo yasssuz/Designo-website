@@ -1,0 +1,28 @@
+.buttonPrimary {
+  background: var(--color-white);
+  border: none;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-black);
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: transparent;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+  }
+
+  &:focus {
+    outline: 3px dashed var(--color-white);
+  }
+}
