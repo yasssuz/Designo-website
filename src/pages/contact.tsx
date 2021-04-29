@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useForm } from "react-hook-form"
+import { ButtonPrimary } from "../components/_Buttons";
 import styles from "../styles/views/Contact.module.scss"
 
 type FormData = {
@@ -61,10 +62,16 @@ export default function Contact() {
                 {errors.phoneNumber && <small>use a valid number</small>}
               </div>
 
-              <textarea
-                {...register("message", { required: true })}
-              />
-              <button type="submit">submit</button>
+              <div className={styles.inputBlock}>
+                <textarea
+                  placeholder="your message"
+                  {...register("message", { required: true })}
+                />
+                {errors.message && <small>this field cannot be empty</small>}
+              </div>
+
+
+              <ButtonPrimary>submit</ButtonPrimary>
             </form>
           </div>
         </section>
