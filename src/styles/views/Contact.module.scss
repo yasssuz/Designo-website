@@ -6,6 +6,7 @@
     background: url('/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg') no-repeat, var(--color-peach);
     background-position: 23% top;
     background-size: 250%;
+    display: grid;
 
     @media screen and (min-width: 650px) {
       margin: 0 24px;
@@ -19,6 +20,14 @@
     @media screen and (min-width: 760px) {
       margin: 0 40px;
     }
+
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7rem;
+      padding: 5.1rem 9.4rem 5.8rem;
+      background-position: 0px -143px;
+      background-size: 650px;
+    }
   }
 
   &__textArea {
@@ -27,6 +36,10 @@
 
     @media screen and (min-width: 650px) {
       text-align: left;
+    }
+
+    @media screen and (min-width: 1000px) {
+      align-self: center;
     }
 
     h1 {
