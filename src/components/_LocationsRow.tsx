@@ -6,7 +6,11 @@ export function LocationsRow() {
     <ul className={styles.locationsRow}>
       <li className={styles.location} id="canada">
         <div className={styles.circle}>
-          <img src="/assets/shared/desktop/illustration-canada.svg" alt="canada location" />
+          <img
+            src="/assets/shared/desktop/illustration-canada.svg"
+            alt="canada location"
+            style={{ height: 202, width: 202 }}
+          />
         </div>
         <h2>Canada</h2>
         <ButtonSecondary
@@ -16,7 +20,11 @@ export function LocationsRow() {
         </ButtonSecondary>
       </li>
       <li className={styles.location} id="australia">
-        <img src="/assets/shared/desktop/illustration-australia.svg" alt="australia location" />
+        <img
+          src="/assets/shared/desktop/illustration-australia.svg"
+          alt="australia location"
+          style={{ height: 202, width: 202 }}
+        />
         <h2>australia</h2>
         <ButtonSecondary
           link="https://www.google.it/maps/search/19+Ballone+Strees+New+South+Wales+2443/@-31.6810885,152.5386399,11z/data=!3m1!4b1"
@@ -25,7 +33,11 @@ export function LocationsRow() {
         </ButtonSecondary>
       </li>
       <li className={styles.location} id="united-kingdom">
-        <img src="/assets/shared/desktop/illustration-united-kingdom.svg" alt="united kingdom location" />
+        <img
+          src="/assets/shared/desktop/illustration-united-kingdom.svg"
+          alt="united kingdom location"
+          style={{ height: 202, width: 202 }}
+        />
         <h2>united kingdom</h2>
         <ButtonSecondary
           link="https://www.google.it/maps/search/13+Colorado+Way+Rhyd-y-fro+SA8+9GA/@51.7320443,-3.8706761,15z/data=!3m1!4b1"
