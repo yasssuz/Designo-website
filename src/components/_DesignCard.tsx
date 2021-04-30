@@ -7,14 +7,15 @@ interface DesignCardProps {
   imgURL: string
 }
 
-export const DesignCard: React.FC<DesignCardProps> = ({title, description, imgURL}) => {
+export const DesignCard: React.FC<DesignCardProps> = ({ title, description, imgURL }) => {
   return (
     <li className={styles.cardContainer}>
       <div className={styles.illustration}>
-        <Image 
+        <Image
           src={imgURL}
           layout='fill'
           objectFit='cover'
+          alt={title}
         />
       </div>
       <div className={styles.content}>

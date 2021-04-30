@@ -18,11 +18,16 @@ export const DesingLink: React.FC<DesignLinkProps> = (props) => {
             layout='fill'
             objectFit='cover'
             className={styles.background}
+            alt={`${props.title} background`}
           />
           <h1 className="title-primary-white">{props.title}</h1>
           <span>
             View projects
-            <img src="/assets/shared/desktop/icon-right-arrow.svg" />
+            <img
+              src="/assets/shared/desktop/icon-right-arrow.svg"
+              style={{ height: 10, width: 7 }}
+              alt={`go to ${props.title}`}
+            />
           </span>
         </a>
       </Link>
