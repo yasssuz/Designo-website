@@ -1,6 +1,7 @@
 .locationsRow {
   list-style: none;
   display: grid;
+  padding: 0 calc((100vw - 1450px) / 2);
 
   @media screen and (min-width: 650px) {
     grid-template-columns: repeat(8, 1fr);
@@ -13,6 +14,7 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
+    text-align: center;
 
     &::before {
       position: absolute;
