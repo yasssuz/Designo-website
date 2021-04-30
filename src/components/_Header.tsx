@@ -16,7 +16,11 @@ export function Header() {
         <div className={`${styles.content} padding-container`}>
           <Link href="/">
             <a href="#" className={styles.aAroundLogo}>
-              <img src="/logo.svg" alt="designo logo" />
+              <img 
+                src="/logo.svg" 
+                alt="designo logo" 
+                style={{ height: 27, width: 202 }} 
+              />
             </a>
           </Link>
           <div
