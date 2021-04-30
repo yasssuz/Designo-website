@@ -11,6 +11,9 @@
       margin: 0 24px;
       padding: 7.1rem 58px;
       border-radius: 1.5rem;
+      background: url('/assets/contact/desktop/bg-pattern-hero-desktop.svg') no-repeat, var(--color-peach);
+      background-position: -180px -100px;
+      background-size: 690px;
     }
 
     @media screen and (min-width: 760px) {
