@@ -1,0 +1,22 @@
+.card {
+  display: grid;
+  grid-template-rows: 320px 1fr;
+
+  & > div {
+    position: relative;
+  }
+
+  .content {
+    background: url('/assets/shared/desktop/bg-pattern-three-circles.svg') no-repeat, var(--color-very-light-peach);
+    text-align: center;
+    padding: 8rem 24px;
+    
+    h2 {
+      margin-bottom: 2.4rem;
+    }
+
+    p + p {
+      margin-top: 3.5rem;
+    }
+  }
+}
