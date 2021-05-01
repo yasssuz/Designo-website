@@ -155,4 +155,8 @@
 
 .locationsArea {
   margin: 12rem 0; 
+
+  @media screen and (min-width: 1000px) {
+    margin: 16rem 0;
+  }
 }
