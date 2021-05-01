@@ -15,3 +15,4 @@
 ## footer
 
 - [ ] links doesn't have discernible name.
+- [ ] logo doesn't have specific width and height.

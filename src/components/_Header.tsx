@@ -13,51 +13,33 @@ export function Header() {
     <>
       <div className={`${isMenuActive && `${styles.overlayActive}`} ${styles.overlay}`} />
       <header className={styles.header}>
-        <div className={`${styles.content} padding-container`}>
+        <div className={styles.content}>
           <Link href="/">
-            <a href="#" className={styles.aAroundLogo}>
-              <img 
-                src="/logo.svg" 
-                alt="designo logo" 
-                style={{ height: 27, width: 202 }} 
+            <a href="#" className={styles.aroundLogo}>
+              <img
+                src="/logo.svg"
+                alt="designo logo"
+                style={{ height: 27, width: 202 }}
               />
             </a>
           </Link>
           <div
-            className={`${isMenuActive && `${styles.mobileTogglerActive}`} ${styles.mobileToggler}`}
+            className={`${isMenuActive && `${styles.active}`} ${styles.mobileToggler}`}
             onClick={handleMenu}
           >
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
           </div>
-          <nav className={`${isMenuActive && `${styles.navigationActive}`} ${styles.navigation}`}>
+          <nav className={`${isMenuActive && `${styles.active}`} ${styles.navigation}`}>
             <Link href="/about">
-              <a
-                href="#"
-                className={styles.navLink}
-                onClick={handleMenu}
-              >
-                Our Company
-              </a>
+              <a href="#" onClick={handleMenu}>Our Company</a>
             </Link>
             <Link href="/locations">
-              <a
-                href="#"
-                className={styles.navLink}
-                onClick={handleMenu}
-              >
-                Locations
-              </a>
+              <a href="#" onClick={handleMenu}>Locations</a>
             </Link>
             <Link href="/contact">
-              <a
-                href="#"
-                className={styles.navLink}
-                onClick={handleMenu}
-              >
-                Contact
-              </a>
+              <a href="#" onClick={handleMenu}>Contact</a>
             </Link>
           </nav>
         </div>
