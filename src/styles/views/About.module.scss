@@ -2,6 +2,16 @@
   display: grid;
   grid-template-rows: 320px 1fr;
 
+  @media screen and (min-width: 650px) {
+    margin: 0 24px 7rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 750px) {
+    margin: 0 40px 12rem;
+  }
+
   & > div {
     position: relative;
   }
@@ -11,6 +21,10 @@
     background-position: right -135px;
     text-align: center;
     padding: 8rem 24px;
+
+    @media screen and (min-width: 650px) {
+      padding: 6.4rem 54px;
+    }
 
     h1 {
       margin-bottom: 2.4rem;

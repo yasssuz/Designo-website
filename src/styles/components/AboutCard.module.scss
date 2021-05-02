@@ -2,6 +2,16 @@
   display: grid;
   grid-template-rows: 320px 1fr;
 
+  @media screen and (min-width: 650px) {
+    margin: 0 24px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 750px) {
+    margin: 0 40px;
+  }
+
   & > div {
     position: relative;
   }
@@ -10,6 +20,10 @@
     background: url('/assets/shared/desktop/bg-pattern-three-circles.svg') no-repeat, var(--color-very-light-peach);
     text-align: center;
     padding: 8rem 24px;
+
+    @media screen and (min-width: 650px) {
+      padding: 6.8rem 59px;
+    }
     
     h2 {
       margin-bottom: 2.4rem;
