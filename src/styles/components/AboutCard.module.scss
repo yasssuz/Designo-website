@@ -3,13 +3,14 @@
   grid-template-rows: 320px 1fr;
 
   @media screen and (min-width: 650px) {
-    margin: 0 24px;
     border-radius: 1.5rem;
     overflow: hidden;
   }
-
-  @media screen and (min-width: 750px) {
-    margin: 0 40px;
+ 
+  @media screen and (min-width: 950px) {
+    min-height: 64rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1.4fr 2fr;
   }
 
   & > div {
@@ -20,9 +21,19 @@
     background: url('/assets/shared/desktop/bg-pattern-three-circles.svg') no-repeat, var(--color-very-light-peach);
     text-align: center;
     padding: 8rem 24px;
+    display: flex;
+    flex-direction: column;
 
     @media screen and (min-width: 650px) {
       padding: 6.8rem 59px;
+      background-position: right -200px;
+    }
+
+    @media screen and (min-width: 950px) {
+      justify-content: center;
+      text-align: left;
+      padding: 7rem 9.6rem;
+      background-position: -170px bottom;
     }
     
     h2 {

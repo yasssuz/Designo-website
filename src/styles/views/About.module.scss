@@ -1,37 +1,69 @@
-.banner {
-  display: grid;
-  grid-template-rows: 320px 1fr;
+.mainContainer {
+  max-width: 1250px;
+  margin: auto;
 
   @media screen and (min-width: 650px) {
-    margin: 0 24px 7rem;
-    border-radius: 1.5rem;
-    overflow: hidden;
+    padding: 0 24px;
   }
 
   @media screen and (min-width: 750px) {
-    margin: 0 40px 12rem;
+    padding: 0 40px;
   }
 
-  & > div {
-    position: relative;
-  }
-
-  &__content {
-    background: url('/assets/about/mobile/bg-pattern-hero-about-mobile.svg') no-repeat, var(--color-peach);
-    background-position: right -135px;
-    text-align: center;
-    padding: 8rem 24px;
+  .banner {
+    display: grid;
+    grid-template-rows: 32rem 1fr;
 
     @media screen and (min-width: 650px) {
-      padding: 6.4rem 54px;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      margin-bottom: 7rem;
     }
 
-    h1 {
-      margin-bottom: 2.4rem;
+    @media screen and (min-width: 750px) {
+      margin-bottom: 12rem;
+    } 
+
+    @media screen and (min-width: 950px) {
+      grid-template-rows: 1fr;
+      grid-template-columns: 2fr 1.5fr; //these are more precise but not responsive enough 64rem 1fr
+      min-height: 48rem;
+    }
+
+    & > div {
+      position: relative;
+    }
+
+    &__content {
+      background: url('/assets/about/mobile/bg-pattern-hero-about-mobile.svg') no-repeat, var(--color-peach);
+      background-position: right -135px;
+      text-align: center;
+      padding: 8rem 24px;
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: 650px) {
+        padding: 6.4rem 54px;
+        background: url('/assets/about/desktop/bg-pattern-hero-about-desktop.svg') no-repeat, var(--color-peach);
+        background-position: -100px -400px;      
+      }
+
+      @media screen and (min-width: 950px) {
+        grid-column: 1 /2;
+        grid-row: 1 /2;
+        text-align: left;
+        justify-content: center;
+        padding: 6rem 65px 6rem 90px;
+        background-position: right bottom;    
+      }
+
+      h1 {
+        margin-bottom: 2.4rem;
+      }
     }
   }
-}
-
-.locations {
-  margin: 12rem 0;
+  
+  .locations {
+    margin: 12rem 0;
+  }
 }
