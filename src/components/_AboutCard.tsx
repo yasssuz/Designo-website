@@ -16,6 +16,7 @@ export function AboutCard(props: AboutCardProps) {
           src={props.imgSrc}
           layout="fill"
           objectFit="cover"
+          quality={100}
         />
       </div>
       <div className={styles.content}>

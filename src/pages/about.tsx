@@ -19,6 +19,7 @@ export default function About() {
               src="/assets/about/mobile/image-about-hero.jpg"
               layout="fill"
               objectFit="cover"
+              quality={100}
             />
           </div>
           <div className={styles.banner__content}>
