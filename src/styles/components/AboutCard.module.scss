@@ -11,6 +11,20 @@
     min-height: 64rem;
     grid-template-rows: 1fr;
     grid-template-columns: 1.4fr 2fr;
+
+    & + & {
+      grid-template-columns: 1.4fr 2fr;
+    }
+
+    &.second {
+      grid-template-columns: 2fr 1.4fr;
+
+      .content {
+        grid-column: 1 /2;
+        grid-row: 1;
+        background-position: bottom left;
+      }
+    }
   }
 
   & > div {
