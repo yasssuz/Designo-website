@@ -1,5 +1,5 @@
-import { Footer } from '../components/_Footer'
-import { Header } from '../components/_Header'
+import { Footer } from '../components/shared/_Footer'
+import { Header } from '../components/shared/_Header'
 import '../styles/core/globals.scss'
 
 function MyApp({ Component, pageProps }) {

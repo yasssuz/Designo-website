@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { CardLocation } from "../components/_CardLocation";
-import { Header } from "../components/_Header";
+import { CardLocation } from "../components/locations/_CardLocation";
 import styles from "../styles/views/Locations.module.scss"
 
 export default function Locations() {

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import styles from "../styles/components/AboutCard.module.scss"
+import styles from "../../styles/components/AboutCard.module.scss"
 
 interface AboutCardProps {
   title: string

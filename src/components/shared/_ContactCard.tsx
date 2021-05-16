@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../styles/components/ContactCard.module.scss'
+import styles from '../../styles/components/ContactCard.module.scss'
 
 export function ContactCard() {
   return (
@@ -9,7 +9,7 @@ export function ContactCard() {
         <p className="paragraph-primary">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
         <Link href="/contact">
           <a>Get in touch</a>
-        </Link>    
+        </Link>
       </div>
     </div>
   )

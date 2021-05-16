@@ -1,9 +1,9 @@
 import Head from "next/head";
 import styles from "../../styles/views/DesignPages.module.scss"
-import { ContactCard } from "../../components/_ContactCard";
-import { DesignBanner } from "../../components/_DesignBanner";
-import { DesignCard } from "../../components/_DesignCard";
-import { DesingLink } from "../../components/_DesignLink";
+import { ContactCard } from "../../components/shared/_ContactCard";
+import { DesignBanner } from "../../components/design/_Banner";
+import { DesignCard } from "../../components/design/_ProjectCard";
+import { DesingLink } from "../../components/design/_CardLink";
 
 export default function GraphicDesign() {
   const designCards = [
@@ -28,33 +28,33 @@ export default function GraphicDesign() {
     <div>
       <Head>
         <title>Designo | Graphic Design</title>
-        <meta name="description" content="We deliver eye-catching branding materials that are tailored to meet your business objectives"/>
+        <meta name="description" content="We deliver eye-catching branding materials that are tailored to meet your business objectives" />
       </Head>
 
       <main className={`${styles.main}`}>
-        <DesignBanner 
+        <DesignBanner
           title="Graphic Design"
           description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
         />
 
         <ul className={styles.designsList}>
-          {designCards.map(card => <DesignCard 
+          {designCards.map(card => <DesignCard
             imgURL={card.imgURL}
-            title={card.title} 
+            title={card.title}
             description={card.description}
             key={card.title}
           />)}
         </ul>
 
         <ul className={styles.linksList}>
-          <DesingLink 
-            title="app design" 
-            imgURL="/assets/home/desktop/image-app-design.jpg" 
+          <DesingLink
+            title="app design"
+            imgURL="/assets/home/desktop/image-app-design.jpg"
             pageURL="/design/app-design"
           />
-          <DesingLink 
+          <DesingLink
             title="web design"
-            imgURL="/assets/home/desktop/image-web-design-small.jpg" 
+            imgURL="/assets/home/desktop/image-web-design-small.jpg"
             pageURL="/design/web-design"
           />
         </ul>

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useForm } from "react-hook-form"
-import { ButtonPrimary } from "../components/_Buttons";
-import { LocationsRow } from "../components/_LocationsRow";
+import { ButtonPrimary } from "../components/shared/_Buttons";
+import { LocationsRow } from "../components/shared/_LocationsRow";
 import styles from "../styles/views/Contact.module.scss"
 
 type FormData = {

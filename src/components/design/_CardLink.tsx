@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../styles/components/DesignLink.module.scss'
+import styles from '../../styles/components/DesignLink.module.scss'
 
 interface DesignLinkProps {
   title: string

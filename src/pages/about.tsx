@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
-import { AboutCard } from "../components/_AboutCard"
-import { LocationsRow } from "../components/_LocationsRow"
+import { AboutCard } from "../components/about/_AboutCard"
+import { LocationsRow } from "../components/shared/_LocationsRow"
 import styles from "../styles/views/About.module.scss"
 
 export default function About() {

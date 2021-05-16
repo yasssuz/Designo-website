@@ -1,9 +1,9 @@
 import Head from "next/head";
 import styles from "../../styles/views/DesignPages.module.scss";
-import { ContactCard } from "../../components/_ContactCard";
-import { DesignBanner } from "../../components/_DesignBanner";
-import { DesignCard } from "../../components/_DesignCard";
-import { DesingLink } from "../../components/_DesignLink";
+import { ContactCard } from "../../components/shared/_ContactCard";
+import { DesignBanner } from "../../components/design/_Banner";
+import { DesignCard } from "../../components/design/_ProjectCard";
+import { DesingLink } from "../../components/design/_CardLink";
 
 export default function AppDesign() {
   const designCards = [
@@ -38,7 +38,7 @@ export default function AppDesign() {
     <div>
       <Head>
         <title>Designo | App Design</title>
-        <meta name="description" content="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."/>
+        <meta name="description" content="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips." />
       </Head>
 
       <main className={`${styles.main}`}>
@@ -50,21 +50,21 @@ export default function AppDesign() {
         <ul className={styles.designsList}>
           {designCards.map(card => <DesignCard
             imgURL={card.imgURL}
-            title={card.title} 
+            title={card.title}
             description={card.description}
             key={card.title}
           />)}
         </ul>
 
         <ul className={styles.linksList}>
-          <DesingLink 
+          <DesingLink
             title="web design"
-            imgURL="/assets/home/desktop/image-web-design-small.jpg" 
+            imgURL="/assets/home/desktop/image-web-design-small.jpg"
             pageURL="/design/web-design"
           />
           <DesingLink
-            title="graphic design" 
-            imgURL="/assets/home/desktop/image-graphic-design.jpg" 
+            title="graphic design"
+            imgURL="/assets/home/desktop/image-graphic-design.jpg"
             pageURL="/design/graphic-design"
           />
         </ul>
