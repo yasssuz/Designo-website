@@ -1,140 +1,119 @@
 .card {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-}
+  grid-template-rows: 320px 1fr;
 
-.card + .card {
-  margin-top: 4.1rem;
-
-  @media screen and (min-width: 700px) {
-    margin-top: 12rem;
-  }
-}
-
-.image {
-  position: relative;
-  height: auto;
-
-  .tablet {
-    display: none;
+  @media screen and (min-width: 650px) {
+    grid-template-rows: 330px 1fr;
+    gap: 2.4rem 0;
+    padding: 0 35px;
   }
 
-  @media screen and (min-width: 700px) {
-    width: 100%;
-    height: 326px;
-    margin-bottom: 3.1rem;
+  @media screen and (min-width: 900px) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    gap: 0 4.2rem;
+  }
 
-    .mobile {
-      display: none;
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 350px;
+  }
+
+  .image {
+    position: relative;
+    
+    @media screen and (min-width: 650px) {
+      border-radius: 1.5rem;
+      overflow: hidden;
     }
 
-    .tablet {
-      display: unset;
+    @media screen and (min-width: 900px) {
+      grid-column: 2 /3;
+      grid-row: 1;
+    }
+  }
 
-      img {
-        border-radius: 1.5em;
+  .info {
+    min-height: 39.4rem;
+    font-style: normal;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: url('/Group6.svg') no-repeat, var(--color-very-light-peach);
+
+    @media screen and (min-width: 650px) {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      text-align: left;
+      align-items: flex-start;
+      padding: 7.5rem;
+      min-height: 32.6rem;
+    }
+
+    .country {
+      color: var(--color-peach);
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 3.6rem;
+
+      @media screen and (min-width: 650px) {
+        line-height: 4.8rem;
+        font-size: 4rem;
       }
-    }
-  }
-}
-
-.info {
-  all: unset;
-  text-align: center;
-  padding: 8rem 0;
-  background: #fdf3f0;
-  position: relative;
-  z-index: 5;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    height: 292px;
-    width: 292px;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
-    opacity: 0.06;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-
-  &::after {
-    content: '';
-    height: 292px;
-    width: 292px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -170px;
-    right: -170px;
-    z-index: -1;
-    background: conic-gradient(from 90deg at 50% 50%, rgba(93, 2, 2, 0.0001) 0deg, rgba(93, 2, 2, 0.497569) 360deg);
-    opacity: 0.06;
-    transform: matrix(0, 1, 1, 0, 0, 0);
-  }
-
-  @media screen and (min-width: 700px) {
-    border-radius: 1.5em;
-    text-align: left;
-    padding: 8.8rem 7.4rem;
-
-    &::before {
-      top: unset;
-      bottom: 0;
-      transform: rotate(40deg);
-    }
-
-    &::after {
-      bottom: 0;
-      right: unset;
-      left: 292px;
-      background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
     }
 
     .specifics {
-      display: flex;
-      align-items: center;
+      margin-top: 2.4rem;
 
-      div {
-        width: 25.5rem;
+      @media screen and (min-width: 650px) {
+        display: flex;
+        align-items: flex-start;
       }
 
-      & > div {
-        margin-right: 3rem;
+      span, h3 {
+        font-weight: normal;
+        line-height: 2.5rem;
+        color: var(--dark-gray);
+        display: block;
+        font-size: 1.5rem;
+
+        @media screen and (min-width: 650px) {
+          line-height: 2.6rem;
+          font-size: 1.6rem;
+        }
       }
 
       h3 {
-        margin: 0;
+        font-weight: bold;
+      }
+
+      div + div {
+        margin-top: 2.4rem;
+
+        @media screen and (min-width: 650px) {
+          margin-top: 0;
+        }
+      }
+      
+      @media screen and (min-width: 650px) {
+        div {
+          width: 255px;
+        }
       }
     }
   }
 }
 
-.country {
-  margin-bottom: 2.4rem;
-}
+.card + .card {
+  margin-top: 4rem;
 
-.sectionDivider {
-  color: var(--color-dark-gray);
-  font-size: 1.5rem;
-  line-height: 1.67;
-  font-weight: 700;
-}
+  @media screen and (min-width: 650px) {
+    margin-top: 12rem;
+  }
 
-.contactInfo {
-  margin-top: 2.4rem;
-}
-
-.street,
-.state,
-.number,
-.email {
-  font-size: 1.5rem;
-  line-height: 1.67;
-  color: var(--color-dark-gray);
-  font-weight: 400;
-  display: block;
+  @media screen and (min-width: 900px) {
+    margin-top: 3.6rem;
+  }
 }

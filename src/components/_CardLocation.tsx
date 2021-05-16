@@ -5,34 +5,23 @@ interface CardLocationProps {
   image: string
   country: string
   office: string
-  street: string 
-  state: string 
-  number: string 
-  email: string 
+  street: string
+  state: string
+  number: string
+  email: string
 }
 
 export const CardLocation: React.FC<CardLocationProps> = (props) => {
   return (
     <li className={styles.card} key={props.office}>
       <div className={styles.image}>
-        <div className={styles.mobile}>
-          <Image 
-            alt="location image"
-            src={props.image}
-            layout= 'responsive'
-            width= {375}
-            height= {320}
-            quality={100}
-          />
-        </div>
-        <div className={styles.tablet}>
-          <Image 
-            alt="location image"
-            src={props.image}
-            layout= 'fill'
-            quality={100}
-          />
-        </div>
+        <Image
+          quality={100}
+          alt="location image"
+          src={props.image}
+          layout='fill'
+          objectFit="cover"
+        />
       </div>
       <address className={styles.info}>
         <h2 className={`${styles.country} title-primary-peach`}>{props.country}</h2>
