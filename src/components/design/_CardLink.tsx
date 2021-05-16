@@ -1,6 +1,6 @@
+import styles from '../../styles/components/design/CardLink.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../../styles/components/design/DesignLink.module.scss'
 
 interface DesignLinkProps {
   title: string
@@ -8,25 +8,27 @@ interface DesignLinkProps {
   pageURL: string
 }
 
-export const DesingLink: React.FC<DesignLinkProps> = (props) => {
+export function DesingLink(props: DesignLinkProps) {
+  const { title, imgURL, pageURL } = props
+
   return (
     <li className={styles.cardContainer}>
-      <Link href={`${props.pageURL}`}>
+      <Link href={`${pageURL}`}>
         <a>
           <Image
-            src={props.imgURL}
+            src={imgURL}
             layout='fill'
             objectFit='cover'
             className={styles.background}
-            alt={`${props.title} background`}
+            alt={`${title} background`}
           />
-          <h1 className="title-primary-white">{props.title}</h1>
+          <h1 className="title-primary-white">{title}</h1>
           <span>
             View projects
             <img
               src="/assets/shared/desktop/icon-right-arrow.svg"
               style={{ height: 10, width: 7 }}
-              alt={`go to ${props.title}`}
+              alt={`go to ${title}`}
             />
           </span>
         </a>

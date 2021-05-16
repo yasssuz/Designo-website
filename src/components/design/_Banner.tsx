@@ -1,13 +1,15 @@
-import styles from '../../styles/components/design/DesignBanner.module.scss'
+import styles from '../../styles/components/design/Banner.module.scss'
 
 interface DesignBannerProps {
   title: string
   description: string
 }
 
-export const DesignBanner: React.FC<DesignBannerProps> = ({ title, description }) => {
+export function Banner(props: DesignBannerProps) {
+  const { title, description } = props
+
   return (
-    <div className={`${styles.bannerContainer}`}>
+    <div className={styles.bannerContainer}>
       <h1 className="title-primary title-primary-white">{title}</h1>
       <p className="paragraph-primary">{description}</p>
     </div>

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../../styles/views/DesignPages.module.scss"
 import { ContactCard } from "../../components/shared/_ContactCard";
-import { DesignBanner } from "../../components/design/_Banner";
+import { Banner } from "../../components/design/_Banner";
 import { DesignCard } from "../../components/design/_ProjectCard";
 import { DesingLink } from "../../components/design/_CardLink";
 
@@ -25,14 +25,14 @@ export default function GraphicDesign() {
   ]
 
   return (
-    <div>
+    <>
       <Head>
         <title>Designo | Graphic Design</title>
         <meta name="description" content="We deliver eye-catching branding materials that are tailored to meet your business objectives" />
       </Head>
 
-      <main className={`${styles.main}`}>
-        <DesignBanner
+      <main className={styles.main}>
+        <Banner
           title="Graphic Design"
           description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
         />
@@ -60,9 +60,7 @@ export default function GraphicDesign() {
         </ul>
       </main>
 
-      <div className={styles.footerArea}>
-        <ContactCard />
-      </div>
-    </div>
+      <ContactCard />
+    </>
   )
 }

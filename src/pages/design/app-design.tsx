@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../../styles/views/DesignPages.module.scss";
 import { ContactCard } from "../../components/shared/_ContactCard";
-import { DesignBanner } from "../../components/design/_Banner";
+import { Banner } from "../../components/design/_Banner";
 import { DesignCard } from "../../components/design/_ProjectCard";
 import { DesingLink } from "../../components/design/_CardLink";
 
@@ -35,14 +35,14 @@ export default function AppDesign() {
   ]
 
   return (
-    <div>
+    <>
       <Head>
         <title>Designo | App Design</title>
         <meta name="description" content="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips." />
       </Head>
 
-      <main className={`${styles.main}`}>
-        <DesignBanner
+      <main className={styles.main}>
+        <Banner
           title="App Design"
           description="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
         />
@@ -70,9 +70,7 @@ export default function AppDesign() {
         </ul>
       </main>
 
-      <div className={styles.footerArea}>
-        <ContactCard />
-      </div>
-    </div>
+      <ContactCard />
+    </>
   )
 }

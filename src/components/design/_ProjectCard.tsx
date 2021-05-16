@@ -1,5 +1,5 @@
+import styles from '../../styles/components/design/ProjectCard.module.scss'
 import Image from 'next/image'
-import styles from '../../styles/components/design/DesignCard.module.scss'
 
 interface DesignCardProps {
   title: string
@@ -7,7 +7,9 @@ interface DesignCardProps {
   imgURL: string
 }
 
-export const DesignCard: React.FC<DesignCardProps> = ({ title, description, imgURL }) => {
+export function DesignCard(props: DesignCardProps) {
+  const { title, description, imgURL } = props
+
   return (
     <li className={styles.cardContainer}>
       <div className={styles.illustration}>

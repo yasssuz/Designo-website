@@ -1,8 +1,13 @@
 .main {
-  padding: 0 calc((100vw - 1250px) / 2);
+  max-width: 1200px;
+  margin: auto;
 
   @media screen and (min-width: 600px) {
-    margin: 0 40px 4rem;
+    padding: 0 40px 4rem;
+  }
+
+  @media screen and (min-width: 1300px) {
+    padding: 0 0 4rem;
   }
 
   .designsList {

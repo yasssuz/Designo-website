@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { ContactCard } from '../../components/shared/_ContactCard'
-import { DesignBanner } from '../../components/design/_Banner'
+import { Banner } from '../../components/design/_Banner'
 import { DesignCard } from '../../components/design/_ProjectCard'
 import { DesingLink } from '../../components/design/_CardLink'
 import styles from '../../styles/views/DesignPages.module.scss'
@@ -40,14 +40,14 @@ export default function WebDesign() {
   ]
 
   return (
-    <div>
+    <>
       <Head>
         <title>Designo | Web Design</title>
         <meta name="description" content="We build websites that serve as powerful marketing tools and bring memorable brand experiences." />
       </Head>
 
-      <main className={`${styles.main}`}>
-        <DesignBanner
+      <main className={styles.main}>
+        <Banner
           title="Web Design"
           description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
         />
@@ -75,9 +75,7 @@ export default function WebDesign() {
         </ul>
       </main>
 
-      <div className={styles.footerArea}>
-        <ContactCard />
-      </div>
-    </div>
+      <ContactCard />
+    </>
   )
 }
