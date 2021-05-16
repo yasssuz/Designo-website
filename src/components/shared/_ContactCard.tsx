@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../../styles/components/ContactCard.module.scss'
+import styles from '../../styles/components/shared/ContactCard.module.scss'
 
 export function ContactCard() {
   return (

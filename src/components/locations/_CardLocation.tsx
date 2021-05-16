@@ -1,5 +1,5 @@
 import Image from "next/image"
-import styles from "../../styles/components/CardLocation.module.scss"
+import styles from "../../styles/components/locations/CardLocation.module.scss"
 
 interface CardLocationProps {
   image: string

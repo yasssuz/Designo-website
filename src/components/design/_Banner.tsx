@@ -1,4 +1,4 @@
-import styles from '../../styles/components/DesignBanner.module.scss'
+import styles from '../../styles/components/design/DesignBanner.module.scss'
 
 interface DesignBannerProps {
   title: string

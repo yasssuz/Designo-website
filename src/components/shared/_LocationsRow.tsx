@@ -1,4 +1,4 @@
-import styles from '../../styles/components/LocationsRow.module.scss';
+import styles from '../../styles/components/shared/LocationsRow.module.scss';
 import { ButtonSecondary } from './_Buttons';
 
 export function LocationsRow() {

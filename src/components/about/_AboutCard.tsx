@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import styles from "../../styles/components/AboutCard.module.scss"
+import styles from "../../styles/components/about/AboutCard.module.scss"
 
 interface AboutCardProps {
   title: string
@@ -11,9 +11,9 @@ interface AboutCardProps {
 }
 
 export function AboutCard(props: AboutCardProps) {
-  const [secondCard, setSeconCard] = useState(false)
+  const [secondCard, setSecondCard] = useState(false)
 
-  useEffect(() => props.id === 'secondCard' && setSeconCard(true), [])
+  useEffect(() => props.id === 'secondCard' && setSecondCard(true), [])
 
   return (
     <div className={`${styles.card} ${secondCard && styles.second}`} id={props.id}>
