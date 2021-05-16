@@ -11,30 +11,32 @@ interface CardLocationProps {
   email: string
 }
 
-export const CardLocation: React.FC<CardLocationProps> = (props) => {
+export function CardLocation(props: CardLocationProps) {
+  const { image, country, office, street, state, number, email } = props
+
   return (
-    <li className={styles.card} key={props.office}>
+    <li className={styles.card} key={office}>
       <div className={styles.image}>
         <Image
           quality={100}
           alt="location image"
-          src={props.image}
+          src={image}
           layout='fill'
           objectFit="cover"
         />
       </div>
       <address className={styles.info}>
-        <h2 className={`${styles.country} title-primary-peach`}>{props.country}</h2>
+        <h2>{country}</h2>
         <div className={styles.specifics}>
           <div>
-            <h3 className={`${styles.office} ${styles.sectionDivider}`}>{props.office}</h3>
-            <span className={styles.street}>{props.street}</span>
-            <span className={styles.state}>{props.state}</span>
+            <h3>{office}</h3>
+            <span>{street}</span>
+            <span>{state}</span>
           </div>
           <div>
-            <h3 className={`${styles.contactInfo} ${styles.sectionDivider}`}>Contact</h3>
-            <span className={styles.number}>P: {props.number}</span>
-            <span className={styles.email}>M: {props.email}</span>
+            <h3>Contact</h3>
+            <span>P: {number}</span>
+            <span>M: {email}</span>
           </div>
         </div>
       </address>
