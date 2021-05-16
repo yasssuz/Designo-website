@@ -1,5 +1,6 @@
 .bannerArea {
-  padding: 0 calc((100vw - 1250px) / 2);
+  max-width: 1200px;
+  margin: auto;
 
   &__content {
     padding: 7.4rem 24px;
@@ -27,6 +28,10 @@
       padding: 5.1rem 9.4rem 5.8rem;
       background-position: 0px -143px;
       background-size: 650px;
+    }
+
+    @media screen and (min-width: 1300px) {
+      margin: 0;
     }
   }
 

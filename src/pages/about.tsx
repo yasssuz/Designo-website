@@ -1,8 +1,8 @@
+import styles from "../styles/views/About.module.scss"
 import Head from "next/head"
 import Image from "next/image"
 import { AboutCard } from "../components/about/_AboutCard"
 import { LocationsRow } from "../components/shared/_LocationsRow"
-import styles from "../styles/views/About.module.scss"
 
 export default function About() {
   return (
@@ -19,7 +19,6 @@ export default function About() {
               src="/assets/about/desktop/image-about-hero.jpg"
               layout="fill"
               objectFit="cover"
-
             />
           </div>
           <div className={styles.banner__content}>

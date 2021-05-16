@@ -24,12 +24,15 @@
   background: var(--color-white);
   position: relative;
   z-index: 100;
-  padding: 3.4rem calc((100vw - 1250px) / 2);
+  padding: 3.4rem 0;
+  margin: auto;
+  max-width: 1200px;
 
   @media screen and (min-width: 760px) {
     padding-top: 6.4rem;
     padding-bottom: 6.4rem;
   }
+
 
   .content {
     display: flex;
@@ -40,6 +43,10 @@
     @media screen and (min-width: 760px) {
       margin: 0 40px;
       align-items: center;
+    }
+
+    @media screen and (min-width: 1300px) {
+      margin: 0;
     }
 
     .aroundLogo {
