@@ -1,8 +1,7 @@
+import styles from "../styles/views/Locations.module.scss"
 import Head from "next/head";
 import { CardLocation } from "../components/locations/_CardLocation";
 import { ContactCard } from "../components/shared/_ContactCard";
-import { Footer } from "../components/shared/_Footer";
-import styles from "../styles/views/Locations.module.scss"
 
 export default function Locations() {
   return (
