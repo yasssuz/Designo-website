@@ -1,16 +1,16 @@
-import Link from 'next/link'
 import styles from '../../styles/components/shared/Footer.module.scss'
+import Link from 'next/link'
 
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <Link href="/">
-        <a className={styles.logo}>
-          <img src="/logo-white.svg" alt="Designo Logo" />
-        </a>
-      </Link>
-      <div className={styles.content}>
-        <nav className={styles.navbarArea}>
+      <div className={styles.footer__top}>
+        <Link href="/">
+          <a className={styles.logo}>
+            <img src="/logo-white.svg" alt="Designo Logo" />
+          </a>
+        </Link>
+        <nav className={styles.navbar}>
           <Link href="/company">
             <a>Our company</a>
           </Link>
@@ -21,19 +21,19 @@ export function Footer() {
             <a>contact</a>
           </Link>
         </nav>
-        <div className={styles.contactArea}>
+      </div>
+      <div className={styles.footer__bottom}>
+        <address>
           <strong>Designo Central Office</strong>
-          <address>
-            <span>3886 Wellington Street</span>
-            <span>Toronto, Ontario M9C 3J5</span>
-          </address>
+          <span>3886 Wellington Street</span>
+          <span>Toronto, Ontario M9C 3J5</span>
+        </address>
+        <address>
           <strong>Contact Us (Central Office)</strong>
-          <address>
-            <span>P: +1 253-863-8967</span>
-            <span>M: contact@designo.co</span>
-          </address>
-        </div>
-        <div className={styles.iconsArea}>
+          <span>P: +1 253-863-8967</span>
+          <span>M: contact@designo.co</span>
+        </address>
+        <div className={styles.icons}>
           <a href="https://www.facebook.com">
             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
               <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" fill="#E7816B" fillRule="nonzero" />

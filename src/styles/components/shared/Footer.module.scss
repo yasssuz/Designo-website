@@ -1,21 +1,48 @@
 .footer {
   background: var(--color-dark-gray);
   padding: 6.4rem 24px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
 
-  .content {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 3.2rem;
-    padding-top: 3.2rem;
-    text-align: center;
+  @media screen and (min-width: 750px) {
+    padding: 8rem 39px;
+    text-align: left;
+  }
 
-    .navbarArea {
+  @media screen and (min-width: 1300px) {
+    padding: 8rem 0;
+  }
+
+  &__top {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+
+    @media screen and (min-width: 750px) {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 4.6rem;
+    }
+
+    .logo {
+      width: 202px;
+      height: 27px
+    }
+
+    .navbar {
       flex-direction: column;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 3.2rem;
+      padding-top: 3.2rem;
+
+      @media screen and (min-width: 750px) {
+        flex-direction: row;
+        border-top: none;
+        margin: 0;
+        padding: 0;
+      }
 
       a {
         color: var(--color-white);
@@ -26,59 +53,80 @@
         text-decoration: none;
         text-transform: uppercase;
       }
-
+        
       a + a {
         margin-top: 3.2rem;
-      }
-    }
 
-    .contactArea {
-      margin-top: 4rem;
-
-      strong {
-        font-size: 1.6rem;
-        line-height: 2.6rem;
-        font-weight: 500;
-        line-height: 2.6rem;
-        color: rgba(255, 255, 255, 0.5);
-      }
-
-      address {
-        font-style: normal;
-        margin-bottom: 4rem;
-        color: rgba(255, 255, 255, 0.4);
-
-        span {
-          font-size: 1.6rem;
-          line-height: 2.6rem;
-          font-weight: 400;
-          line-height: 2.6rem;
-          display: block;
+        @media screen and (min-width: 750px) {
+          margin-top: 0;
+          margin-left: 4.2rem;
         }
       }
     }
+  }
 
-    .iconsArea {
+  &__bottom {
+    max-width: 1200px;
+    margin: auto;
+    
+    @media screen and (min-width: 750px) {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    address {
+      font-style: normal;
+      margin-bottom: 4rem;
+      color: rgba(255, 255, 255, 0.5);
+
+      @media screen and (min-width: 750px) {
+        margin-bottom: 0;
+      }
+
+      span, strong {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        font-weight: 400;
+        line-height: 2.6rem;
+        display: block;
+      }
+
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    address + address {
+      @media screen and (min-width: 750px) {
+        margin-left: 6.1rem;
+      }
+    }
+
+    .icons {
+      @media screen and (min-width: 750px) {
+        margin-left: auto;
+      }
+
       svg {
         cursor: pointer;
         transition: transform 0.15s ease;
-
+    
         path {
           transition: fill 0.15s ease;
         }
-
+    
         &:hover {
           transform: scale(1.1);
-
+    
           path {
             fill: var(--color-light-peach);
           }
         }
       }
-
+    
       a + a {
         margin-left: 1.6rem;
       }
-    }
+    }    
   }
 }
