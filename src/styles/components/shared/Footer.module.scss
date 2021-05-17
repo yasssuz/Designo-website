@@ -1,5 +1,5 @@
 .footer {
-  background: var(--color-dark-gray);
+  background: var(--color-semi-black);
   padding: 6.4rem 24px;
   text-align: center;
 
@@ -99,6 +99,10 @@
     address + address {
       @media screen and (min-width: 750px) {
         margin-left: 6.1rem;
+      }
+
+      @media screen and (min-width: 1000px) {
+        margin-left: 20rem;
       }
     }
 
