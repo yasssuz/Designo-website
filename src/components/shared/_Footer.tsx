@@ -11,7 +11,7 @@ export function Footer() {
           </a>
         </Link>
         <nav className={styles.navbar}>
-          <Link href="/company">
+          <Link href="/about">
             <a>Our company</a>
           </Link>
           <Link href="/locations">
