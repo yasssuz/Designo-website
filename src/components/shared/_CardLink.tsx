@@ -1,4 +1,4 @@
-import styles from '../../styles/components/design/CardLink.module.scss'
+import styles from '../../styles/components/shared/CardLink.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -13,7 +13,7 @@ export function DesingLink(props: DesignLinkProps) {
 
   return (
     <li className={styles.cardContainer}>
-      <Link href={`${pageURL}`}>
+      <Link href={pageURL}>
         <a>
           <Image
             src={imgURL}
