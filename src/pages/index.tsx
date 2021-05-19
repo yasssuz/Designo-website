@@ -12,6 +12,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <Hero />
+        <section className={styles.cardsLinks}>
+
+        </section>
       </main>
 
       <br />

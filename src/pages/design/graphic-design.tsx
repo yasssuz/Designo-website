@@ -3,7 +3,7 @@ import styles from "../../styles/views/DesignPages.module.scss"
 import { ContactCard } from "../../components/shared/_ContactCard";
 import { Banner } from "../../components/design/_Banner";
 import { DesignCard } from "../../components/design/_ProjectCard";
-import { DesingLink } from "../../components/design/_CardLink";
+import { DesingLink } from "../../components/shared/_CardLink";
 
 export default function GraphicDesign() {
   const designCards = [
