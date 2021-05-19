@@ -1,0 +1,33 @@
+.hero {
+  text-align: center;
+  padding-top: 8rem;
+  min-height: 84.3rem;
+  background: url('/Group64.png') no-repeat bottom, var(--color-peach);
+  background-size: 100%;
+  position: relative;
+  z-index: 10;
+
+  &::before {
+    position: absolute;
+    content: url('/assets/home/desktop/bg-pattern-hero-home.svg');
+    left: 0;
+    z-index: -1;
+  }
+
+  h1 {
+    max-width: 20ch;
+    margin: auto;
+  }
+
+  p {
+    max-width: 35ch;
+    margin: 1.4rem auto 2.4rem;
+  }
+
+  a {
+    padding: 1em 1.4em;
+    display: block;
+    width: 16rem;
+    margin: auto;
+  }
+}
