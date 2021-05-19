@@ -2,23 +2,28 @@
   position: relative;
   z-index: 10;
   padding: 0 24px;
-
+  
   @media screen and (min-width: 600px) {
-    padding: 0 calc((100vw - 1250px) / 2);
+    padding: 0 calc((100vw - 1200px) / 2);
   }
 
+  
   &::after {
     content: '';
     height: 50%;
-    background: var(--color-dark-gray);
+    background: var(--color-semi-black);
     display: block;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: -1;
-  }
 
+    @media screen and (min-width: 600px) {
+     height: 25%;
+    }
+  }
+  
   .cardContent {
     height: 37.9rem;
     width: 100%;
@@ -34,14 +39,36 @@
     background: url('/Group31.svg') no-repeat center right, var(--color-peach);
     background-size: cover;
 
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      padding: 0 5.5rem;
+      height: 29.2rem;
+    }
+    
     @media screen and (min-width: 600px) {
       width: calc(100% - 80px);
       margin: auto;
       height: 35rem;
     }
 
+    @media screen and (min-width: 1300px) {
+      width: 100%;
+    }
+
+    h2 {
+      margin: 0 auto;
+      max-width: 13ch;
+
+      @media screen and (min-width: 900px) {
+        margin: 0;
+      }
+    }
+
     p {
-      margin: 1.4rem 0 3.2rem;
+      margin: 1.4rem auto 3.2rem;
+      max-width: 45ch;
     }
 
     a {

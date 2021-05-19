@@ -3,6 +3,7 @@ import Head from "next/head"
 import Image from "next/image"
 import { AboutCard } from "../components/about/_AboutCard"
 import { LocationsRow } from "../components/shared/_LocationsRow"
+import { ContactCard } from "../components/shared/_ContactCard"
 
 export default function About() {
   return (
@@ -43,6 +44,8 @@ export default function About() {
           id="secondCard"
         />
       </main>
+
+      <ContactCard />
     </>
   )
 }
