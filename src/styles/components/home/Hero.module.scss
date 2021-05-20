@@ -6,12 +6,24 @@
   background-size: 100%;
   position: relative;
   z-index: 10;
+  overflow: hidden;
+
+  @media screen and (min-width: 600px) {
+    margin: 0 4rem;
+    border-radius: 1.5rem;
+    background-size: 390px;
+  }
 
   &::before {
     position: absolute;
     content: url('/assets/home/desktop/bg-pattern-hero-home.svg');
     left: 0;
     z-index: -1;
+
+    @media screen and (min-width: 600px) {
+      left: unset;
+      right: -130px;
+    }
   }
 
   h1 {

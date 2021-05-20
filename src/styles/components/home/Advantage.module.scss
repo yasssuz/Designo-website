@@ -1,8 +1,28 @@
 .card {
   text-align: center;
 
+  @media screen and (min-width: 600px) {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  @media screen and (min-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
   & + & {
     margin-top: 8rem;
+
+    @media screen and (min-width: 600px) {
+      margin-top: 3.2rem;
+    }
+
+    @media screen and (min-width: 900px) {
+      margin-top: 0;
+      margin-left: 3rem;
+    }
   }
 
   &:nth-child(1) .illustration::before {
@@ -33,19 +53,48 @@
     }
   }
 
-  h3 {
-    letter-spacing: 0.5rem;
-    line-height: 2.5rem;  
-    color: var(--color-dark-gray);
-    font-size: 2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin: 4.8rem 0 3.2rem;
-  }
+  .text {
+    @media screen and (min-width: 600px) {
+      margin-left: 4.8rem;
+    }
 
-  p {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-    color: var(--color-dark-gray);
+    @media screen and (min-width: 900px) {
+      margin-left: 0;
+      margin-top: 4.8rem;
+    }
+    
+    h3 {
+      letter-spacing: 0.5rem;
+      line-height: 2.5rem;  
+      color: var(--color-dark-gray);
+      font-size: 2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 4.8rem 0 3.2rem;
+
+      @media screen and (min-width: 600px) {
+        margin: 0 0 1.6rem;
+      }
+
+      @media screen and (min-width: 900px) {
+        margin-bottom: 3.2rem;
+      }
+    }
+  
+    p {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      color: var(--color-dark-gray);
+      margin: auto;
+      max-width: 35ch;
+
+      @media screen and (min-width: 600px) {
+        max-width: none;
+      }
+
+      @media screen and (min-width: 900px) {
+        max-width: 36ch;
+      }
+    }
   }
 }

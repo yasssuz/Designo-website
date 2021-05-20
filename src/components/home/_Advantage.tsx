@@ -13,8 +13,10 @@ export function Advantage(props: AdvantageProps) {
       <div className={styles.illustration}>
         <img src={`/assets/home/desktop/illustration-${title}.svg`} alt="advantage" />
       </div>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <div className={styles.text}>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
     </li>
   )
 }
