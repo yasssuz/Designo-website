@@ -8,7 +8,7 @@ export default function Locations() {
     <>
       <Head>
         <title>Designo | Locations</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Our locations :)" />
       </Head>
 
       <main className={styles.mainContainer}>
