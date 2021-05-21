@@ -9,10 +9,10 @@
 
 ## Design Pages
 
-- [ ] max width of the main content don't match with the header one.
-- [ ] the background of the header is inverted.
+- [x] max width of the main content don't match with the header one.
+- [x] the background of the header is inverted.
 
 ## footer
 
 - [ ] links doesn't have discernible name.
-- [ ] logo doesn't have specific width and height.
+- [x] logo doesn't have specific width and height.
