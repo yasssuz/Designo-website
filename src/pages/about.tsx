@@ -20,6 +20,7 @@ export default function About() {
               src="/assets/about/desktop/image-about-hero.jpg"
               layout="fill"
               objectFit="cover"
+              alt="working togheter"
             />
           </div>
           <div className={styles.banner__content}>

@@ -23,6 +23,7 @@ export function AboutCard(props: AboutCardProps) {
           layout="fill"
           objectFit="cover"
           quality={100}
+          alt={props.title}
         />
       </div>
       <div className={styles.content}>
