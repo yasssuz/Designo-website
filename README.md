@@ -32,7 +32,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://designo-website.vercel.app/](https://your-solution-url.com)
 - Live Site URL: [https://designo-website.vercel.app/](https://designo-website.vercel.app/)
 
 ## My process
